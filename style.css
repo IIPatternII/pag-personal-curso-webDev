@@ -1,0 +1,199 @@
+/************************** EVERYTHING **************************/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+:root {
+  --leading: 2em;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background: #f2f2f2;
+}
+
+p {
+  line-height: var(--leading);
+}
+
+/************************** HERO **************************/
+
+.hero-bg {
+  background: #307d99
+    url('https://upload.wikimedia.org/wikipedia/commons/6/69/7-78049_small-memory-8k-wallpaper-forest-minimalist-wallpaper-4k.jpg');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding-bottom: 4em;
+}
+
+header {
+  padding: 1em 0;
+}
+
+.hero-bg a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 2em 0 1.2em;
+}
+
+h1 span {
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+h1 span::before {
+  content: ' ';
+  position: absolute;
+  width: 3em;
+  background: #00bfff;
+  height: 0.4em;
+  bottom: 0;
+  z-index: -1;
+  margin-left: -0.3em;
+}
+
+.hero-bg p {
+  font-weight: bold;
+  margin: 0 1em 3em;
+}
+
+button {
+  background-color: #f89104;
+  border: none;
+  width: 85%;
+  color: white;
+  font-weight: bold;
+  padding: 1em 0;
+  border-radius: 0.5em;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(216, 126, 1);
+}
+
+.top {
+  animation: fadeInTop 2s forwards;
+  max-width: 1000px;
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-2em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/********************** MAIN CONTENT ***********************/
+
+section {
+  max-width: 1200px;
+  margin: auto;
+}
+.right-col {
+  text-align: center;
+  animation: fadeInLeft 2s forwards;
+}
+
+.left-col {
+  text-align: center;
+  animation: fadeInRight 2s forwards;
+}
+
+h2 {
+  text-transform: uppercase;
+  position: relative;
+}
+
+h2::before {
+  content: ' ';
+  position: absolute;
+  width: 8em;
+  background: #00bfff;
+  height: 0.4em;
+  bottom: 0;
+  z-index: -1;
+  margin-left: -0.3em;
+}
+
+img {
+  width: 100%;
+}
+
+@media (min-width: 930px) {
+  section.right-col {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: 'image content';
+  }
+
+  section.left-col {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: 'content image';
+  }
+
+  .text-col {
+    grid-area: content;
+    padding: 0 10%;
+    text-align: left;
+    align-self: center;
+  }
+
+  img {
+    grid-area: image;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-2em);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(2em);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/********************** FOOTER ***********************/
+
+footer {
+  padding: 1em 2em;
+  background: #0d0d0d;
+  color: #909090;
+  text-align: center;
+  align-items: center;
+}
+
+i {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  color: #909090;
+}
