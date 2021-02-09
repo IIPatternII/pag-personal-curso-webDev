@@ -19,15 +19,15 @@ section {
 
 p {
   line-height: var(--leading);
-  margin: 1em 1em;
+  /* margin: 1em 1em; */
   /* text-align: justify; */
 }
 
 /************************** HERO **************************/
 
 .hero-bg {
-  background: #307d99
-    url('https://upload.wikimedia.org/wikipedia/commons/6/69/7-78049_small-memory-8k-wallpaper-forest-minimalist-wallpaper-4k.jpg');
+  background-color: #307d99;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/69/7-78049_small-memory-8k-wallpaper-forest-minimalist-wallpaper-4k.jpg');
   background-size: cover;
   color: white;
   text-align: center;
@@ -77,29 +77,18 @@ h1 span::before {
 
 button {
   background-color: #f89104;
-  border: none;
-  width: 85%;
   color: white;
-  font-weight: bold;
-  padding: 1em 0;
+  border: none;
   border-radius: 0.5em;
+  width: 85%;
+  font-weight: bold;
   font-size: 1.3em;
+  padding: 1em 0;
   cursor: pointer;
 }
 
 button:hover {
   background-color: rgb(216, 126, 1);
-}
-
-@keyframes fadeInTop {
-  from {
-    opacity: 0;
-    transform: translateY(-2em);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /********************** MAIN CONTENT ***********************/
@@ -158,6 +147,34 @@ img {
     grid-area: image;
   }
 }
+/********************** FOOTER ***********************/
+
+footer {
+  padding: 1em 2em;
+  background: #0d0d0d;
+  color: #909090;
+  text-align: center;
+  align-items: center;
+}
+
+i {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  color: #909090;
+}
+
+/********************** ANIMATIONS ***********************/
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-2em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes fadeInLeft {
   from {
@@ -179,20 +196,4 @@ img {
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-/********************** FOOTER ***********************/
-
-footer {
-  padding: 1em 2em;
-  background: #0d0d0d;
-  color: #909090;
-  text-align: center;
-  align-items: center;
-}
-
-i {
-  margin: 0.5rem;
-  font-size: 1.5rem;
-  color: #909090;
 }
