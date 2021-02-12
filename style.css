@@ -111,7 +111,7 @@ h2 {
 h2::before {
   content: ' ';
   position: absolute;
-  width: 8em;
+  width: 5em;
   background: #00bfff;
   height: 0.4em;
   bottom: 0;
@@ -121,6 +121,13 @@ h2::before {
 
 img {
   width: 100%;
+  grid-area: image;
+}
+
+.text-col {
+  grid-area: content;
+  padding: 0 10%;
+  align-self: center;
 }
 
 @media (min-width: 930px) {
@@ -137,14 +144,7 @@ img {
   }
 
   .text-col {
-    grid-area: content;
-    padding: 0 10%;
     text-align: left;
-    align-self: center;
-  }
-
-  img {
-    grid-area: image;
   }
 }
 /********************** FOOTER ***********************/
